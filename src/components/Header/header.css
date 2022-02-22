@@ -1,10 +1,11 @@
 .header {
 	padding: 1.9rem 4rem;
 	display: flex;
-	background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+	align-items: center;
+	background-color: #333333;
 	color: white;
 }
 
-.header__logo {
+.header__title {
 	margin-right: auto;
 }
