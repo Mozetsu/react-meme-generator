@@ -1,0 +1,10 @@
+.header {
+	padding: 1.9rem 4rem;
+	display: flex;
+	background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+	color: white;
+}
+
+.header__logo {
+	margin-right: auto;
+}
