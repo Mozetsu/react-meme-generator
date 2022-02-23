@@ -1,6 +1,8 @@
 import React from 'react';
 import './image.css';
 
-export default function Image() {
-	return <section className='image'></section>;
-}
+const Image = (props) => {
+	return <img src={props.url} alt="" className="image" />;
+};
+
+export default Image;
