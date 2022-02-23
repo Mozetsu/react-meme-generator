@@ -21,8 +21,8 @@ body {
 }
 
 #root {
+	padding-top: 5rem;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	height: 100%;
 }
