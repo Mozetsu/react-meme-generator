@@ -26,7 +26,7 @@ export default function App() {
 		}));
 	};
 
-	const handleData = (event) => {
+	const handleMemeData = (event) => {
 		const { value, name } = event.target;
 
 		setMemeData((prevMemeData) => ({
@@ -42,7 +42,7 @@ export default function App() {
 
 	const formProps = {
 		setMemeUrl,
-		handleData,
+		handleMemeData,
 		getRandomUrl,
 		handleNewMeme,
 	};
