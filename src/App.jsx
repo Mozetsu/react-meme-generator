@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import Form from './components/Form/Form';
 import Image from './components/Image/Image';
@@ -12,7 +12,11 @@ export default function App() {
 		url: '',
 	});
 
-	const getRandomUrl = () => {
+	useEffect(() => {
+		setMemeUrl(getRandomMemeUrl());
+	}, []);
+
+	const getRandomMemeUrl = () => {
 		const { memes } = memesData.data;
 		const randomIndex = Math.floor(Math.random() * memes.length);
 		const { url } = memes[randomIndex];
@@ -37,13 +41,11 @@ export default function App() {
 
 	const handleNewMeme = (e) => {
 		e.preventDefault();
-		setMemeUrl(getRandomUrl());
+		setMemeUrl(getRandomMemeUrl());
 	};
 
 	const formProps = {
-		setMemeUrl,
 		handleMemeData,
-		getRandomUrl,
 		handleNewMeme,
 	};
 
@@ -51,7 +53,7 @@ export default function App() {
 		<section className="app">
 			<Header />
 			<Form {...formProps} />
-			<Image url={memeData.url} />
+			<Image meme={memeData} />
 		</section>
 	);
 }

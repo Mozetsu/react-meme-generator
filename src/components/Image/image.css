@@ -1,3 +1,26 @@
+.meme-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
 .image {
 	width: 100%;
+}
+
+.meme-text {
+	color: white;
+	position: absolute;
+	z-index: 3;
+	font-weight: bold;
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+
+.top {
+	top: 1rem;
+}
+
+.bottom {
+	bottom: 1rem;
 }
