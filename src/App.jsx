@@ -3,23 +3,26 @@ import Header from './components/Header/Header';
 import Form from './components/Form/Form';
 import Image from './components/Image/Image';
 import './app.css';
-import memesData from './utils/data';
 
 export default function App() {
+	const [memesArray, setMemesArray] = useState([]);
 	const [memeData, setMemeData] = useState({
 		topText: '',
 		bottomText: '',
-		url: '',
+		url: 'https://i.imgflip.com/26am.jpg',
 	});
 
 	useEffect(() => {
-		setMemeUrl(getRandomMemeUrl());
+		(async () => {
+			const response = await fetch('https://api.imgflip.com/get_memes');
+			const { data } = await response.json();
+			setMemesArray([...data.memes]);
+		})();
 	}, []);
 
 	const getRandomMemeUrl = () => {
-		const { memes } = memesData.data;
-		const randomIndex = Math.floor(Math.random() * memes.length);
-		const { url } = memes[randomIndex];
+		const randomIndex = Math.floor(Math.random() * memesArray.length);
+		const { url } = memesArray[randomIndex];
 		return url;
 	};
 
