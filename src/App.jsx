@@ -39,14 +39,14 @@ export default function App() {
 		}));
 	};
 
-	const handleNewMeme = (e) => {
-		e.preventDefault();
+	const handleNewImage = () => {
 		setMemeUrl(getRandomMemeUrl());
 	};
 
 	const formProps = {
+		memeData,
 		updateMemeData,
-		handleNewMeme,
+		handleNewImage,
 	};
 
 	return (
