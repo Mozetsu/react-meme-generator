@@ -4,7 +4,9 @@ import './header.css';
 const Header = () => (
 	<section className="header">
 		<h3 className="header__title">Meme Generator</h3>
-		<p className="header__description">React course - Project 3</p>
+		<a className="header__description" target="_blank" href="https://mozetsu.dev/">
+			@mozetsu.dev
+		</a>
 	</section>
 );
 
