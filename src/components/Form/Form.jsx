@@ -4,7 +4,7 @@ import './form.css';
 const Form = (props) => {
 	useEffect(() => {
 		const randomUrl = props.getRandomUrl();
-		props.setImageUrl(randomUrl);
+		props.setMemeUrl(randomUrl);
 	}, []);
 
 	return (

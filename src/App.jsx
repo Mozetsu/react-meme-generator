@@ -19,7 +19,7 @@ export default function App() {
 		return url;
 	};
 
-	const setImageUrl = (url) => {
+	const setMemeUrl = (url) => {
 		setMemeData((prevMemeData) => ({
 			...prevMemeData,
 			url,
@@ -37,11 +37,11 @@ export default function App() {
 
 	const handleNewMeme = (e) => {
 		e.preventDefault();
-		setImageUrl(getRandomUrl());
+		setMemeUrl(getRandomUrl());
 	};
 
 	const formProps = {
-		setImageUrl,
+		setMemeUrl,
 		handleData,
 		getRandomUrl,
 		handleNewMeme,
