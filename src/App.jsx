@@ -30,7 +30,7 @@ export default function App() {
 		}));
 	};
 
-	const handleMemeData = (event) => {
+	const updateMemeData = (event) => {
 		const { value, name } = event.target;
 
 		setMemeData((prevMemeData) => ({
@@ -45,7 +45,7 @@ export default function App() {
 	};
 
 	const formProps = {
-		handleMemeData,
+		updateMemeData,
 		handleNewMeme,
 	};
 
