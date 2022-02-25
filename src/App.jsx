@@ -12,6 +12,7 @@ export default function App() {
 		url: 'https://i.imgflip.com/26am.jpg',
 	});
 
+	// fetch memes on app first render
 	useEffect(() => {
 		(async () => {
 			const response = await fetch('https://api.imgflip.com/get_memes');
