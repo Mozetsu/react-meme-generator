@@ -9,7 +9,7 @@ export default function App() {
 	const [memeData, setMemeData] = useState({
 		topText: '',
 		bottomText: '',
-		url: 'https://i.imgflip.com/26am.jpg',
+		url: 'https://i.imgflip.com/1ihzfe.jpg',
 	});
 
 	// fetch memes on app first render
