@@ -1,4 +1,4 @@
-# Meme Generator consuming external API
+# Meme Generator that consumes external API
 Project built from scratch to test my knowledge in React.
 
 ## Objective
@@ -15,6 +15,9 @@ Build a web application where users can generate memes. It should be built witho
 - Render new image on app load using useEffect hook;
 
 ## Development
+Used (Vite)[https://vitejs.dev/] to generate the boilerplate code as it is getting a lot of attention lately. I personally love the build speed to setup new projects. The difference becomes extremely evident when compared to the well known (create-react-app)[https://create-react-app.dev/] alternative.
+
+The project is fairly simple as I was looking to consolidate my concepts of react. I sticked to a simple app where I could focus more on the code rather than the UI/UX. Created three separate components (Header, Form, and Image), each residing on its own folder of same name. By allocating each component into its own separate folder it became extremely easy to manage separate files related to any given component, such as the css files. 
 
 ## Conclusion
 ...
