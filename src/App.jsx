@@ -53,11 +53,15 @@ export default function App() {
 
 	const downloadMeme = async () => {
 		const node = document.querySelector('.meme-container');
-		const canvas = await htmlToImage.toCanvas(node);
+		const renderedMeme = await htmlToImage.toCanvas(node);
+		const randomString = Math.random()
+			.toString(36)
+			.replace(/[^0-9]+/g, '')
+			.substring(0, 5);
 
 		const link = document.createElement('a');
-		link.download = 'filename.png';
-		link.href = canvas.toDataURL();
+		link.download = `${randomString}.png`;
+		link.href = renderedMeme.toDataURL();
 		link.click();
 	};
 
