@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import * as htmlToImage from 'html-to-image';
+
+// components
 import Header from './components/Header/Header';
 import Form from './components/Form/Form';
 import Image from './components/Image/Image';
+import Download from './components/Download/Download';
 import './app.css';
 
 export default function App() {
@@ -47,6 +51,16 @@ export default function App() {
 		setMemeUrl(getRandomMemeUrl());
 	};
 
+	const downloadMeme = async () => {
+		const node = document.querySelector('.meme-container');
+		const canvas = await htmlToImage.toCanvas(node);
+
+		const link = document.createElement('a');
+		link.download = 'filename.png';
+		link.href = canvas.toDataURL();
+		link.click();
+	};
+
 	const formProps = {
 		memeData,
 		updateMemeData,
@@ -58,6 +72,7 @@ export default function App() {
 			<Header />
 			<Form {...formProps} />
 			<Image meme={memeData} />
+			<Download downloadMeme={downloadMeme} />
 		</section>
 	);
 }
