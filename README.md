@@ -17,6 +17,7 @@ Build a web application where users can generate memes. It should be built witho
 - Retrieve images from external API source;
 - Controlled forms using useState hook;
 - Render new image on app load using useEffect hook;
+- Download image;
 
 ## Development
 Used [Vite](https://vitejs.dev/) to generate the boilerplate code as it is getting a lot of attention lately. I personally love the build speed to setup new projects. The difference becomes extremely evident when compared to the well known [create-react-app](https://create-react-app.dev/) alternative.
